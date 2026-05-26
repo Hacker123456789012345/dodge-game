@@ -1,0 +1,44 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0a0a0f;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #fff; overflow: hidden;
+}
+#hud {
+  display: flex; justify-content: space-between;
+  width: 400px; font-size: 14px;
+  color: rgba(255,255,255,0.5); margin-bottom: 10px;
+}
+#hud span { font-weight: 600; color: #fff; }
+#ammo-bar { display: flex; gap: 4px; align-items: center; }
+.ammo-pip { width: 8px; height: 14px; border-radius: 3px; background: #00ffe0; transition: background 0.1s; }
+.ammo-pip.empty { background: rgba(255,255,255,0.15); }
+#game-container { position: relative; width: 400px; height: 500px; }
+#gameCanvas {
+  display: block;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  background: #0a0a0f;
+}
+#overlay {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+#overlay-box {
+  background: rgba(10,10,15,0.9);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px; padding: 2rem 2.5rem;
+  text-align: center; display: flex; flex-direction: column; gap: 10px;
+}
+#overlay-title { font-size: 26px; font-weight: 600; }
+#overlay-sub { font-size: 14px; color: rgba(255,255,255,0.5); }
+#controls-hint { font-size: 11px; color: rgba(255,255,255,0.28); margin-top: 2px; line-height: 1.7; }
+#restart-btn {
+  margin-top: 6px; padding: 9px 28px; font-size: 14px;
+  border-radius: 8px; border: 1px solid rgba(255,255,255,0.25);
+  background: transparent; color: #fff; cursor: pointer; transition: background 0.15s;
+}
+#restart-btn:hover { background: rgba(255,255,255,0.08); }
